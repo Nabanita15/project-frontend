@@ -15,8 +15,11 @@ function Signup() {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post("http://localhost:3000/signup", data);
-      console.log("API Response:", response.data); // Log response
+      const response = await axios.post(
+        "https://project-backend-4rt2.onrender.com/signup",
+        data
+      );
+      console.log("API Response:", response.data); 
       alert(response.data.message);
       navigate("/page");
     } catch (error) {

@@ -13,7 +13,10 @@ function Login() {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post("http://localhost:3000/login", data);
+      const response = await axios.post(
+        "https://project-backend-4rt2.onrender.com/login",
+        data
+      );
       alert(response.data.message);
       localStorage.setItem("token", response.data.token); // Save the token
       navigate("/page");
